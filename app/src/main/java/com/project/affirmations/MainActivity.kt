@@ -67,15 +67,16 @@ fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
         Column {
             Image(
-                painter = painterResource(R.drawable.image1),
-                contentDescription = stringResource(R.string.affirmation1),
+                painter = painterResource(id = affirmation.imageResourceId),
+                contentDescription = stringResource(id = affirmation.stringResourceId),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(194.dp),
                 contentScale = ContentScale.Crop
             )
+            // Use affirmation's stringResourceId for the text
             Text(
-                text = LocalContext.current.getString(R.string.affirmation1),
+                text = stringResource(id = affirmation.stringResourceId),
                 modifier = Modifier.padding(16.dp),
                 style = MaterialTheme.typography.headlineSmall
             )
