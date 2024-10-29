@@ -42,15 +42,15 @@ fun AffirmationDetailScreen(navController: NavController, quoteId: Int, authorId
                         contentScale = ContentScale.Crop
                     )
                 }
-                Text(
+               Text(
                     text = stringResource(id = quoteId),
                     fontSize = 24.sp,
-                    modifier = Modifier.padding(top = 16.dp, start = 8.dp)
+                    modifier = Modifier.padding(top = 16.dp, start = 24.dp, end = 24.dp, bottom = 4.dp)
                 )
                 Text(
                     text = "~ " + stringResource(id = authorId),
                     fontSize = 18.sp,
-                    modifier = Modifier.padding(top = 8.dp)
+                    modifier = Modifier.padding(top = 4.dp, start = 24.dp, end = 24.dp)
                 )
             }
         }
